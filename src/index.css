@@ -1172,3 +1172,335 @@ body {
     opacity: 0;
   }
 }
+
+/* ── Home Intro Component Classes ── */
+.hero-banner {
+  background: var(--card-bg);
+  border: 2px solid var(--neo-border-color);
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-heading {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1.1;
+  max-width: 800px;
+  margin: 0;
+}
+
+.hero-subtext {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  max-width: 620px;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* =============================================
+   MOBILE RESPONSIVE — ≤ 768px
+   ============================================= */
+@media (max-width: 768px) {
+
+  /* App container padding */
+  .app-container {
+    padding: 1rem 0.875rem;
+    gap: 1.25rem;
+  }
+
+  /* Header stacks vertically */
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .logo-section {
+    justify-content: center;
+  }
+
+  .logo-text h1 {
+    font-size: 1.35rem;
+  }
+
+  /* Nav tabs: horizontal scroll */
+  .view-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  .view-tabs::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 0.5rem 0.625rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  /* Header actions wrap */
+  .header-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .header-actions .btn {
+    flex: 1;
+    min-width: 72px;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Stats grid: 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+  }
+
+  .readiness-card { grid-column: span 2; }
+
+  .stat-val { font-size: 1.75rem; }
+
+  /* Filter bar stacks */
+  .filter-bar {
+    flex-direction: column;
+    gap: 0.875rem;
+    padding: 1rem;
+    align-items: stretch;
+  }
+
+  .search-input-wrapper {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .filter-selects {
+    width: 100%;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-selects .select-wrapper { flex: 1; min-width: 120px; }
+  .select-control { width: 100%; font-size: 0.8125rem; }
+
+  /* Questions grid: single column */
+  .questions-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Card action row stacks */
+  .card-actions-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .confidence-selector { width: 100%; }
+  .action-buttons { align-self: flex-end; }
+
+  /* Modal: bottom-sheet slide-up on mobile */
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-content {
+    max-width: 100%;
+    max-height: 92vh;
+    border-radius: 16px 16px 0 0;
+    padding: 1.5rem 1.25rem;
+    animation: modalSlideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 0.625rem;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Flashcard review */
+  .flashcard-wrapper { height: 280px; }
+
+  .review-header-section h2 { font-size: 1.4rem; }
+
+  .flashcard-front, .flashcard-back { padding: 1.375rem; }
+
+  .flashcard-question-text { font-size: 1.1rem; }
+  .flashcard-answer-text  { font-size: 0.9375rem; }
+
+  .study-action-row {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .study-action-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Keyboard shortcuts label not useful on touch */
+  .instruction-text { display: none; }
+
+  /* Toast: full-width at bottom */
+  .toast-container {
+    bottom: 1rem;
+    right: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .toast-message {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Empty state */
+  .empty-state-card { padding: 2rem 1rem; }
+
+  /* Hero section */
+  .hero-banner {
+    padding: 2.5rem 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .hero-heading {
+    font-size: 1.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtext {
+    font-size: 0.9375rem;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem !important;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================================
+   MOBILE RESPONSIVE — ≤ 480px (very small)
+   ============================================= */
+@media (max-width: 480px) {
+
+  .app-container {
+    padding: 0.75rem 0.625rem;
+    gap: 1rem;
+  }
+
+  /* Tabs compact */
+  .tab-btn {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* Stats: single column */
+  .stats-grid { grid-template-columns: 1fr; }
+  .readiness-card { grid-column: span 1; }
+
+  /* Flashcard compact */
+  .flashcard-wrapper { height: 260px; }
+  .flashcard-front, .flashcard-back { padding: 1.125rem; }
+  .flashcard-question-text { font-size: 1rem; }
+
+  /* Buttons tighter */
+  .btn {
+    font-size: 0.8125rem;
+    padding: 0.5rem 0.875rem;
+  }
+
+  /* Modal very compact */
+  .modal-content {
+    max-height: 95vh;
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+
+  .modal-title { font-size: 1.1rem; }
+
+  /* Textarea shorter on mobile */
+  .form-control-textarea { min-height: 160px; }
+
+  /* Hero heading */
+  .logo-text h1 { font-size: 1.2rem; }
+}
+
+/* =============================================
+   MOBILE MODAL SLIDE-UP ANIMATION
+   ============================================= */
+@keyframes modalSlideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* =============================================
+   TOUCH DEVICE: remove hover lifts
+   (prevents stuck :hover transform after tap)
+   ============================================= */
+@media (hover: none) {
+  .glass-panel:hover {
+    transform: none;
+    box-shadow: var(--card-shadow);
+    border-color: var(--neo-border-color);
+  }
+
+  .stat-card:hover {
+    transform: none !important;
+    box-shadow: var(--card-shadow) !important;
+    border-color: var(--neo-border-color) !important;
+  }
+
+  .btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 0 var(--neo-border-color);
+  }
+}

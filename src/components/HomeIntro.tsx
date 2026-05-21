@@ -15,22 +15,7 @@ export const HomeIntro: React.FC<HomeIntroProps> = ({
     <div className="home-container" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', animation: 'fadeIn 0.4s ease-out' }}>
 
       {/* Spectacular Neobrutalist Hero Banner */}
-      <div
-        style={{
-          background: 'var(--card-bg)',
-          border: '2px solid var(--neo-border-color)',
-          borderRadius: '16px',
-          padding: '4rem 2rem',
-          boxShadow: 'var(--card-shadow)',
-          textAlign: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '1.75rem',
-          position: 'relative',
-          overflow: 'hidden'
-        }}
-      >
+      <div className="hero-banner">
         {/* Neon accent top border */}
         <div
           style={{
@@ -70,34 +55,15 @@ export const HomeIntro: React.FC<HomeIntroProps> = ({
           </svg>
         </div>
 
-        <h1
-          style={{
-            fontSize: '2.75rem',
-            fontWeight: 800,
-            letterSpacing: '-0.04em',
-            color: 'var(--text-primary)',
-            lineHeight: 1.1,
-            maxWidth: '800px',
-            margin: 0
-          }}
-        >
+        <h1 className="hero-heading">
           Conquer Engineering Interviews with PrepNest
         </h1>
 
-        <p
-          style={{
-            fontSize: '1.0625rem',
-            color: 'var(--text-secondary)',
-            maxWidth: '620px',
-            lineHeight: '1.6',
-            fontWeight: 500,
-            margin: 0
-          }}
-        >
+        <p className="hero-subtext">
           An offline-first spaced repetition engine engineered for elite developers. Organize system design, algorithm, and coding blueprints and drill them with lightning keyboard shortcuts.
         </p>
 
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '0.5rem' }}>
+        <div className="hero-cta-row">
           <button
             className="btn btn-primary"
             style={{
@@ -141,7 +107,7 @@ export const HomeIntro: React.FC<HomeIntroProps> = ({
       </div>
 
       {/* Feature Columns Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+      <div className="features-grid">
 
         {/* Core Pillar 1 */}
         <div className="glass-panel" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
